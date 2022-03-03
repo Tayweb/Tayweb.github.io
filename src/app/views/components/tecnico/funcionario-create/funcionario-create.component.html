@@ -1,0 +1,45 @@
+
+<form class="form" >
+  <h2>NOVO FUNCIONÁRIO</h2>
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput placeholder="Ex. Pizza" [formControl]="nome" required [(ngModel)]="funcionario.nome" name="nome"
+      maxlength="50">
+    <mat-error *ngIf="nome.invalid">{{errorValidNome()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>CPF</mat-label>
+    <input matInput placeholder="000.000.000.00" [formControl]="cpf" required [(ngModel)]="funcionario.cpf" name="cpf"
+      maxlength="14">
+    <mat-error *ngIf="cpf.invalid">{{errorValidCpf()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Telefone</mat-label>
+    <input matInput placeholder="Ex. (00) 90000-0000" [formControl]="telefone" required
+      [(ngModel)]="funcionario.telefone" name="telefone" maxlength="14">
+    <mat-error *ngIf="telefone.invalid">{{errorValidTelefone()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Login</mat-label>
+    <input [(ngModel)]="funcionario.login" [formControl]="login" required matInput placeholder="Ex. maria.santos"
+      name="login" maxlength="20">
+    <mat-error *ngIf="login.invalid">{{errorValidLogin()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Senha</mat-label>
+    <input matInput [type]=" 'password'" [formControl]="senha" required [(ngModel)]="funcionario.senha" name="senha"
+      maxlength="20">
+    <mat-error *ngIf="senha.invalid">{{errorValidSenha()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Cargo</mat-label>
+    <mat-select [(value)]="funcionario.cargo" required>
+        <mat-option value="0">ASSISTENTE</mat-option>
+        <mat-option value="1">TÉCNICO</mat-option>
+    </mat-select>
+</mat-form-field>
+  <button  (click)="salvar()"
+    [disabled]="errorValidNome() || errorValidCpf() || errorValidTelefone() || errorValidLogin() || errorValidSenha()"
+    mat-stroked-button color="primary">CRIAR</button>
+  <button (click)="cancelar()" mat-stroked-button color="warn">CANCELAR</button>
+</form>

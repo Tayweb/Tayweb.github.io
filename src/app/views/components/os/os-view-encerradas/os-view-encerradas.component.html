@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>DETALHES DA ORDEM DE SERVIÇO</h2>
+    <mat-card class="mat-elevation-z2">
+        <p class="abertura">Data de abertura: {{os.dataAbertura}}</p>
+        <p class="fechamento">Data de Fechamento: {{os.dataFechamento}}</p>
+        <h4>Descrição:</h4>
+        <p>{{os.observacoes}}</p>
+    </mat-card>
+    <button (click)="cancelar()" class="mat-elevation-z2" mat-stroked-button color="warn">VOLTAR</button>
+    <button mat-stroked-button class="mat-elevation-z2" (click)="openDialog()" color="primary">Imprimir</button>
+</div>

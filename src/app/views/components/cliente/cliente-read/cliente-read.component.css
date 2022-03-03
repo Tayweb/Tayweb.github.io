@@ -1,0 +1,38 @@
+.container {
+    width: 80%;
+    margin-right: auto;
+    margin-left: 16%;
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  .create {
+    width: 80%;
+    margin-right: auto;
+    margin-left: 16%;
+    margin-top: 20px;
+  }
+
+  h2{
+    padding-left: 10%;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+  }
+  
+  
+  .create button {
+    width: 100%;
+  
+  }
+  
+  #edit{
+    color: #2b71f3d2;
+  }
+  
+  #delete{
+    padding-left: 20px;
+    color: #e93535;
+  }

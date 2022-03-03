@@ -1,0 +1,40 @@
+.card{
+    font-family: 'Almarai', sans-serif;
+	font-size: 0.9rem;
+	color:#2e2e2e;
+	background: #fff;
+	width: 350px;
+    height: 250px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.full-width{
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.button{
+    width: 350px;
+
+}
+
+.toolbar{
+    width:  350px;
+    height: 50px;
+    background-color: #3F51B5;
+    color: #fff;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.form-div{
+    display: flex;
+}
+
+mat-icon{
+    margin-top: 15px;
+    margin-right: 15px;
+    font-size: 1.3rem;
+}

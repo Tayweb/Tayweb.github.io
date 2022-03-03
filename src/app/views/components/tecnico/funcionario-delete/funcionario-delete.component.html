@@ -1,0 +1,30 @@
+
+<form class="form" >
+    <h2>EXCLUIR FUNCIONÁRIO</h2>
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput placeholder="Ex. Pizza" disabled [(ngModel)]="funcionario.nome" name="nome"
+        maxlength="50">
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>CPF</mat-label>
+      <input matInput placeholder="000.000.000.00" [(ngModel)]="funcionario.cpf" name="cpf" disabled
+        maxlength="14">
+      
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Telefone</mat-label>
+      <input matInput placeholder="Ex. (00) 90000-0000" disabled
+        [(ngModel)]="funcionario.telefone" name="telefone">
+
+    </mat-form-field>
+    <mat-label>Cargo</mat-label>
+    <mat-select>
+      <mat-option value="one">First option</mat-option>
+      <mat-option value="two">Second option</mat-option>
+    </mat-select>
+    <button
+      mat-stroked-button color="primary" (click)="desativar()">EXCLUIR</button>
+    <button (click)="cancelar()" mat-stroked-button color="warn">CANCELAR</button>
+  </form>
+  

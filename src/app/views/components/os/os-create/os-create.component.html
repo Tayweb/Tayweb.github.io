@@ -1,0 +1,45 @@
+<h2>CRIAR ORDEM DE SERVIÇO</h2>
+<div class="container">
+    <div class="labels">
+        <mat-form-field appearance="fill">
+            <mat-label>Selecione um técnico</mat-label>
+            <mat-select [(value)]="os.funcionario" required="required">
+                <mat-option *ngFor="let funcio of funcionario" value="{{funcio.id}}">{{funcio.nome}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Selecione um cliente</mat-label>
+            <mat-select [(value)]="os.cliente" required="required">
+                <mat-option *ngFor="let cli of cliente" value="{{cli.id}}">{{cli.nome}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Status</mat-label>
+            <mat-select [(value)]="os.status" >
+                <mat-option value="0">ABERTO</mat-option>
+                <mat-option value="1">EM ANDAMENTO</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Prioridade</mat-label>
+            <mat-select [(value)]="os.prioridade" >
+                <mat-option value="0">BAIXA</mat-option>
+                <mat-option value="1">MEDIA</mat-option>
+                <mat-option value="2">ALTA</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <form class="example-form">
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Observações</mat-label>
+            <textarea [(ngModel)]="os.observacoes" name="observacoes" matInput maxlength="255" required="required" [formControl]="observacoes"></textarea>
+            <mat-error *ngIf="observacoes.invalid">{{errorValidObs()}}</mat-error>
+        </mat-form-field>
+    </form>
+    <button (click)=" salvar()"  [disabled]="errorValidObs()" mat-stroked-button color="primary">CRIAR</button>
+    <button (click)="cancelar()" mat-stroked-button color="warn">CANCELAR</button>
+</div>

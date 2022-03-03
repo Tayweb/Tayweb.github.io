@@ -1,0 +1,18 @@
+<h2>RELATÓRIO ORDENS DE SERVIÇOS</h2>
+<div class="container">
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Data Inicio</mat-label>
+            <input matInput [type]=" 'date'" name="dataInicio" [(ngModel)]="osReport.dataInicio" required="required">
+        </mat-form-field>
+        
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Data Fim</mat-label>
+            <input matInput [type]=" 'date'" name="dataFim" [(ngModel)]="osReport.dataFim" required="required">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="openDialog()" class="button" >Imprimir</button>
+    </form>
+    
+
+</div>

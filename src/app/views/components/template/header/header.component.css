@@ -1,0 +1,11 @@
+.header{
+    display: flex;
+    height: 60px;
+    background-color: #3F51B5;
+    color: #fff;
+}
+
+.exit{
+    margin-left: 85%;
+}
+

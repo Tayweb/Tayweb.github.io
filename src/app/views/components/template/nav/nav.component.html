@@ -1,0 +1,45 @@
+<div [hidden]="esconderBarra()" class="nav">
+
+    <mat-sidenav-container class="container">
+        <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
+            <mat-nav-list class="nav-list">
+                <a mat-list-item routerLink="home">
+                    <i class="material-icons">home</i>
+                    Inicio
+                </a>
+                <a mat-list-item routerLink="funcionario">
+                    <i class="material-icons">work</i>
+                    Funcionário
+                </a>
+                <a mat-list-item routerLink="clientes">
+                    <i class="material-icons">person_search</i>
+                    Cliente
+                </a>
+                <a mat-list-item [matMenuTriggerFor]="menu">
+                    <mat-menu #menu="matMenu">
+                        <a routerLink="os" mat-menu-item>Abertas ou Em Andamentos</a>
+                        <a routerLink="os/closed" mat-menu-item>Encerradas</a>
+                    </mat-menu>
+                    <i class="material-icons">person_pin</i>Ordens de Serviços
+                </a>
+                <a mat-list-item routerLink="/relatorio">
+                    <i class="material-icons">class</i>
+                    Relatorio OS
+                </a>
+
+               <!--  <a mat-list-item [matMenuTriggerFor]="menus">
+                    <mat-menu #menus="matMenu">
+                        <a routerLink="/" mat-menu-item>Relatório de Clientes</a>
+                        <a routerLink="relatorio-os" mat-menu-item> Relatório Ordens de Serviços</a>
+                    </mat-menu>
+                    <i class="material-icons">class</i>Relatórios
+                </a> -->
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content class="content">
+
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+
+
+</div>

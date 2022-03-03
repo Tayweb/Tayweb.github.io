@@ -1,0 +1,51 @@
+.container {
+    width: 80%;
+    margin-right: auto;
+    margin-left: 16%;
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+h2{
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+  .create {
+    width: 80%;
+    margin-right: auto;
+    margin-left: 16%;
+    margin-top: 20px;
+  }
+  
+  
+  .create button {
+    width: 100%;
+  
+  }
+  
+  #edit{
+    color: #2b71f3d2;
+  }
+  
+  #delete{
+    padding-left: 20px;
+    color: #262626;
+  }
+
+  td.baixa{
+    color: #07a707;
+  }
+
+  td.media{
+    color: #e7e300;
+  }
+
+  td.alta{
+   color: #e93535;
+  }
+  
